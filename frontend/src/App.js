@@ -8,6 +8,7 @@ import Overview from './components/Overview';
 import Features from './components/Features';
 import Reviews from './components/Reviews';
 import Location from './components/Location';
+import ContactUs from './components/ContactUs';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Features />
             <Reviews />
             <Location />
+            <ContactUs />
           </div>
           <div>
             <BookingWidget />
