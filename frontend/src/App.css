@@ -132,4 +132,9 @@ img {
   .hero-gallery-grid > div {
     height: 300px !important;
   }
+  
+  .things-to-know-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
 }
