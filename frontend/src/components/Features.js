@@ -10,10 +10,7 @@ const Features = () => {
     'Microwave',
     'Dishwasher',
     'Washer & Dryer',
-    'Parking',
-    'Pool',
-    'Hot Tub',
-    'Balcony'
+    'Parking'
   ];
 
   return (
