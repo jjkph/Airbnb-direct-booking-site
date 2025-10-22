@@ -128,7 +128,7 @@ const HeroGallery = () => {
                 document.getElementById('reviews')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              [#] reviews
+              4 reviews
             </a>
           </div>
         </div>
