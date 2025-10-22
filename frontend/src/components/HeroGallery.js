@@ -265,6 +265,7 @@ const HeroGallery = () => {
                 objectFit: 'contain',
                 borderRadius: '12px'
               }}
+              onClick={(e) => e.stopPropagation()}
             />
             <div style={{
               color: 'white',
@@ -282,8 +283,13 @@ const HeroGallery = () => {
               {currentImageIndex + 1} / {images.length}
             </div>
           </div>
+          
+          {/* Close Button */}
           <button
-            onClick={() => setShowLightbox(false)}
+            onClick={(e) => {
+              e.stopPropagation();
+              setShowLightbox(false);
+            }}
             style={{
               position: 'absolute',
               top: '20px',
@@ -302,6 +308,64 @@ const HeroGallery = () => {
           >
             ×
           </button>
+          
+          {/* Previous Button */}
+          {currentImageIndex > 0 && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setCurrentImageIndex(currentImageIndex - 1);
+              }}
+              style={{
+                position: 'absolute',
+                left: '40px',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                background: 'rgba(255,255,255,0.9)',
+                border: 'none',
+                width: '50px',
+                height: '50px',
+                borderRadius: '50%',
+                cursor: 'pointer',
+                fontSize: '24px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontWeight: '700'
+              }}
+            >
+              ‹
+            </button>
+          )}
+          
+          {/* Next Button */}
+          {currentImageIndex < images.length - 1 && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setCurrentImageIndex(currentImageIndex + 1);
+              }}
+              style={{
+                position: 'absolute',
+                right: '40px',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                background: 'rgba(255,255,255,0.9)',
+                border: 'none',
+                width: '50px',
+                height: '50px',
+                borderRadius: '50%',
+                cursor: 'pointer',
+                fontSize: '24px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontWeight: '700'
+              }}
+            >
+              ›
+            </button>
+          )}
         </div>
       )}
     </>
