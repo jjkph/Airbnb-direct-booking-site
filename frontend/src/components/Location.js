@@ -1,8 +1,11 @@
 import React from 'react';
 
 const Location = () => {
+  const address = "920 N 11th Ct, Hollywood, FL 33019";
+  const apiKey = "AIzaSyA6oM8ZrcqvbFsjZwfBDpkefMyEpreix54";
+  
   return (
-    <div className="card">
+    <div className="card" id="location">
       <h2>Location</h2>
       
       <div style={{
@@ -29,42 +32,24 @@ const Location = () => {
         </div>
       </div>
 
-      {/* Map Placeholder */}
+      {/* Google Map */}
       <div style={{
         width: '100%',
-        height: '300px',
-        background: '#e5e7eb',
+        height: '400px',
         borderRadius: '12px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: '#999',
-        fontSize: '14px',
-        marginBottom: '16px'
+        overflow: 'hidden',
+        border: '1px solid #e5e7eb'
       }}>
-        <div style={{ textAlign: 'center' }}>
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#999" strokeWidth="1.5" style={{ marginBottom: '8px' }}>
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-            <circle cx="12" cy="10" r="3" />
-          </svg>
-          <div>Map View</div>
-        </div>
+        <iframe
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          style={{ border: 0 }}
+          src={`https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${encodeURIComponent(address)}&zoom=15`}
+          allowFullScreen
+          title="Property Location Map"
+        ></iframe>
       </div>
-
-      <a 
-        href="https://maps.google.com/?q=Hollywood+FL"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="btn-primary"
-        style={{
-          width: '100%',
-          textAlign: 'center',
-          display: 'block',
-          textDecoration: 'none'
-        }}
-      >
-        Get Directions
-      </a>
     </div>
   );
 };
