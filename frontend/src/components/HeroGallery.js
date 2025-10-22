@@ -54,6 +54,31 @@ const HeroGallery = () => {
       url: 'https://customer-assets.emergentagent.com/job_hollywood-retreat/artifacts/e5nfxomd_10.%20Bathroom%202.JPG',
       title: 'Bathroom 2',
       alt: 'Elegant bathroom with marble countertops'
+    },
+    {
+      url: 'https://customer-assets.emergentagent.com/job_hollywood-retreat/artifacts/n5m8u503_11.%20Bathroom%203.JPG',
+      title: 'Bathroom 3',
+      alt: 'Beautiful bathroom with decorative wallpaper'
+    },
+    {
+      url: 'https://customer-assets.emergentagent.com/job_hollywood-retreat/artifacts/qu4lptc3_12.%20From%20listing%20-%20Whole%20house.jpg',
+      title: 'Whole House',
+      alt: 'Aerial view of entire property'
+    },
+    {
+      url: 'https://customer-assets.emergentagent.com/job_hollywood-retreat/artifacts/oee0a3mz_13.%20Counter%20seating.JPG',
+      title: 'Counter Seating',
+      alt: 'Kitchen counter with bar seating'
+    },
+    {
+      url: 'https://customer-assets.emergentagent.com/job_hollywood-retreat/artifacts/cytfsu9s_14.%20Kitchen%20well-equipped.JPG',
+      title: 'Well-Equipped Kitchen',
+      alt: 'Kitchen with modern appliances'
+    },
+    {
+      url: 'https://customer-assets.emergentagent.com/job_hollywood-retreat/artifacts/mz3uvjzg_15.%20Coffee%20station.JPG',
+      title: 'Coffee Station',
+      alt: 'Barista-style coffee maker station'
     }
   ];
 
