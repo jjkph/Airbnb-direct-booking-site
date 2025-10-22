@@ -113,7 +113,7 @@ const HeroGallery = () => {
           {/* Status Badge & Title */}
           <div style={{ marginBottom: '20px' }}>
             <span style={{
-              background: '#8b5cf6',
+              background: '#3b82f6',
               color: 'white',
               padding: '6px 16px',
               borderRadius: '6px',
@@ -122,7 +122,7 @@ const HeroGallery = () => {
               textTransform: 'uppercase',
               letterSpacing: '0.5px'
             }}>
-              For Rent
+              Waterfront
             </span>
           </div>
 
