@@ -128,14 +128,20 @@ The home is in a quiet, residential neighborhood and the City of Hollywood enfor
             >
               ×
             </button>
-            <h2 style={{ marginBottom: '24px' }}>Full Description</h2>
-            <div style={{ 
-              whiteSpace: 'pre-line',
-              lineHeight: '1.7',
-              color: '#555'
-            }}>
-              {fullDescription}
-            </div>
+            <h2 style={{ marginBottom: '24px' }}>About this space</h2>
+            <div 
+              style={{ 
+                lineHeight: '1.7',
+                color: '#555'
+              }}
+              dangerouslySetInnerHTML={{ 
+                __html: fullDescription
+                  .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                  .split('\n')
+                  .map(line => line.trim())
+                  .join('<br />')
+              }}
+            >
           </div>
         </div>
       )}
