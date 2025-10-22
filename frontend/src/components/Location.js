@@ -13,10 +13,10 @@ const Location = () => {
     
     script.onload = () => {
       if (mapRef.current && window.google) {
-        // Property location
-        const propertyLocation = { lat: 26.0112, lng: -80.1495 };
-        // Center shifted down to show more beach
-        const mapCenter = { lat: 26.0180, lng: -80.1495 };
+        // 920 N 11th Ct, Hollywood, FL 33019 coordinates
+        const propertyLocation = { lat: 26.0192, lng: -80.1441 };
+        // Center shifted down slightly to show more beach
+        const mapCenter = { lat: 26.0240, lng: -80.1441 };
         
         const map = new window.google.maps.Map(mapRef.current, {
           center: mapCenter,
