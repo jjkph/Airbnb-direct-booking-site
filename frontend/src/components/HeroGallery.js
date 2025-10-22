@@ -121,8 +121,8 @@ const HeroGallery = () => {
               }}
             >
               <img
-                src={images[0]}
-                alt="Main property view"
+                src={images[0].url}
+                alt={images[0].alt}
                 style={{
                   width: '100%',
                   height: '100%',
