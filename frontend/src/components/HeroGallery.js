@@ -144,12 +144,12 @@ const HeroGallery = () => {
             className="hero-gallery-grid"
             style={{
               display: 'grid',
-              gridTemplateColumns: '1.5fr 1fr',
+              gridTemplateColumns: '2fr 1fr 1fr',
               gap: '12px',
               height: '500px'
             }}
           >
-            {/* Main Large Image */}
+            {/* Main Large Image - spans 2 rows */}
             <div 
               onClick={() => openGallery(0)}
               style={{
@@ -157,7 +157,8 @@ const HeroGallery = () => {
                 cursor: 'pointer',
                 overflow: 'hidden',
                 borderRadius: '12px',
-                background: '#ddd'
+                background: '#ddd',
+                gridRow: 'span 2'
               }}
             >
               <img
@@ -199,78 +200,123 @@ const HeroGallery = () => {
               </div>
             </div>
 
-            {/* Right Side - Smaller Images */}
-            <div style={{
-              display: 'grid',
-              gridTemplateRows: '1fr 1fr',
-              gap: '12px'
-            }}>
-              <div 
-                onClick={() => openGallery(1)}
+            {/* Top Right Images */}
+            <div 
+              onClick={() => openGallery(1)}
+              style={{
+                position: 'relative',
+                cursor: 'pointer',
+                overflow: 'hidden',
+                borderRadius: '12px',
+                background: '#ddd'
+              }}
+            >
+              <img
+                src={images[1].url}
+                alt={images[1].alt}
                 style={{
-                  position: 'relative',
-                  cursor: 'pointer',
-                  overflow: 'hidden',
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
                   borderRadius: '12px',
-                  background: '#ddd'
+                  transition: 'transform 0.3s ease'
                 }}
-              >
-                <img
-                  src={images[1].url}
-                  alt={images[1].alt}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    borderRadius: '12px',
-                    transition: 'transform 0.3s ease'
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-                />
-              </div>
+                onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+              />
+            </div>
+
+            <div 
+              onClick={() => openGallery(2)}
+              style={{
+                position: 'relative',
+                cursor: 'pointer',
+                overflow: 'hidden',
+                borderRadius: '12px',
+                background: '#ddd'
+              }}
+            >
+              <img
+                src={images[2].url}
+                alt={images[2].alt}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  borderRadius: '12px',
+                  transition: 'transform 0.3s ease'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+              />
+            </div>
+
+            {/* Bottom Right Images */}
+            <div 
+              onClick={() => openGallery(3)}
+              style={{
+                position: 'relative',
+                cursor: 'pointer',
+                overflow: 'hidden',
+                borderRadius: '12px',
+                background: '#ddd'
+              }}
+            >
+              <img
+                src={images[3].url}
+                alt={images[3].alt}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  borderRadius: '12px',
+                  transition: 'transform 0.3s ease'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+              />
+            </div>
               
-              <div 
-                onClick={() => openGallery(2)}
+            <div 
+              onClick={() => openGallery(4)}
+              style={{
+                position: 'relative',
+                cursor: 'pointer',
+                overflow: 'hidden',
+                borderRadius: '12px',
+                background: '#ddd'
+              }}
+            >
+              <img
+                src={images[4].url}
+                alt={images[4].alt}
                 style={{
-                  position: 'relative',
-                  cursor: 'pointer',
-                  overflow: 'hidden',
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
                   borderRadius: '12px',
-                  background: '#ddd'
+                  transition: 'transform 0.3s ease'
                 }}
-              >
-                <img
-                  src={images[2].url}
-                  alt={images[2].alt}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    borderRadius: '12px',
-                    transition: 'transform 0.3s ease'
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-                />
-                {/* +2 View More Overlay */}
-                <div style={{
-                  position: 'absolute',
-                  bottom: '16px',
-                  right: '16px',
-                  background: 'rgba(59, 130, 246, 0.95)',
-                  color: 'white',
-                  padding: '12px 20px',
-                  borderRadius: '8px',
-                  fontSize: '15px',
-                  fontWeight: '600',
-                  cursor: 'pointer',
-                  transition: 'all 0.2s',
-                  backdropFilter: 'blur(8px)'
-                }}>
-                  + 2<br/>
-                  <span style={{ fontSize: '12px', fontWeight: '400' }}>VIEW MORE</span>
-                </div>
+                onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+              />
+              {/* +5 View More Overlay */}
+              <div style={{
+                position: 'absolute',
+                bottom: '16px',
+                right: '16px',
+                background: 'rgba(59, 130, 246, 0.95)',
+                color: 'white',
+                padding: '12px 20px',
+                borderRadius: '8px',
+                fontSize: '15px',
+                fontWeight: '600',
+                cursor: 'pointer',
+                transition: 'all 0.2s',
+                backdropFilter: 'blur(8px)'
+              }}>
+                + 5<br/>
+                <span style={{ fontSize: '12px', fontWeight: '400' }}>VIEW MORE</span>
               </div>
             </div>
           </div>
