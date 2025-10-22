@@ -255,16 +255,33 @@ const HeroGallery = () => {
             padding: '40px'
           }}
         >
-          <img
-            src={images[currentImageIndex]}
-            alt="Gallery view"
-            style={{
-              maxWidth: '90%',
-              maxHeight: '90vh',
-              objectFit: 'contain',
-              borderRadius: '12px'
-            }}
-          />
+          <div style={{ textAlign: 'center' }}>
+            <img
+              src={images[currentImageIndex].url}
+              alt={images[currentImageIndex].alt}
+              style={{
+                maxWidth: '90%',
+                maxHeight: '80vh',
+                objectFit: 'contain',
+                borderRadius: '12px'
+              }}
+            />
+            <div style={{
+              color: 'white',
+              fontSize: '18px',
+              marginTop: '16px',
+              fontWeight: '500'
+            }}>
+              {images[currentImageIndex].title}
+            </div>
+            <div style={{
+              color: '#999',
+              fontSize: '14px',
+              marginTop: '8px'
+            }}>
+              {currentImageIndex + 1} / {images.length}
+            </div>
+          </div>
           <button
             onClick={() => setShowLightbox(false)}
             style={{
