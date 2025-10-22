@@ -1,25 +1,33 @@
 import React from 'react';
 import './App.css';
-import HeroSection from './components/HeroSection';
-import PropertyOverview from './components/PropertyOverview';
-import PhotoGallery from './components/PhotoGallery';
-import Amenities from './components/Amenities';
+import Header from './components/Header';
+import HeroGallery from './components/HeroGallery';
+import BookingWidget from './components/BookingWidget';
+import Description from './components/Description';
+import Overview from './components/Overview';
+import Features from './components/Features';
 import Reviews from './components/Reviews';
-import ContactSection from './components/ContactSection';
-import Footer from './components/Footer';
-import Navigation from './components/Navigation';
+import Location from './components/Location';
 
 function App() {
   return (
     <div className="App">
-      <Navigation />
-      <HeroSection />
-      <PropertyOverview />
-      <PhotoGallery />
-      <Amenities />
-      <Reviews />
-      <ContactSection />
-      <Footer />
+      <Header />
+      <HeroGallery />
+      <div className="container">
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 400px', gap: '24px', marginTop: '24px' }}>
+          <div>
+            <Description />
+            <Overview />
+            <Features />
+            <Reviews />
+            <Location />
+          </div>
+          <div>
+            <BookingWidget />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
