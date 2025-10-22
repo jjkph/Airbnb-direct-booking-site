@@ -17,7 +17,7 @@ const Features = () => {
   ];
 
   return (
-    <div className="card">
+    <div className="card" id="amenities">
       <h2>Features</h2>
       <div style={{
         display: 'grid',
