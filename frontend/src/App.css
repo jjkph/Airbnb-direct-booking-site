@@ -101,6 +101,12 @@ img {
 .mt-48 { margin-top: 48px; }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .main-layout {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 26px;
@@ -112,5 +118,9 @@ img {
   
   .card {
     padding: 24px;
+  }
+  
+  .container {
+    padding: 0 16px;
   }
 }
