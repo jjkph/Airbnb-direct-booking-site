@@ -67,7 +67,7 @@ const Location = () => {
           color: '#2c3e50',
           marginBottom: '8px'
         }}>
-          Hollywood Waterfront District
+          Hollywood Lakes
         </div>
         <div style={{
           fontSize: '15px',
