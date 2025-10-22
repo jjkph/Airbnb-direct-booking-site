@@ -176,8 +176,8 @@ const HeroGallery = () => {
                 }}
               >
                 <img
-                  src={images[1]}
-                  alt="Property view 2"
+                  src={images[1].url}
+                  alt={images[1].alt}
                   style={{
                     width: '100%',
                     height: '100%',
@@ -201,8 +201,8 @@ const HeroGallery = () => {
                 }}
               >
                 <img
-                  src={images[2]}
-                  alt="Property view 3"
+                  src={images[2].url}
+                  alt={images[2].alt}
                   style={{
                     width: '100%',
                     height: '100%',
@@ -213,7 +213,7 @@ const HeroGallery = () => {
                   onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
                   onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
                 />
-                {/* +1 View More Overlay */}
+                {/* +2 View More Overlay */}
                 <div style={{
                   position: 'absolute',
                   bottom: '16px',
@@ -228,7 +228,7 @@ const HeroGallery = () => {
                   transition: 'all 0.2s',
                   backdropFilter: 'blur(8px)'
                 }}>
-                  + 1<br/>
+                  + 2<br/>
                   <span style={{ fontSize: '12px', fontWeight: '400' }}>VIEW MORE</span>
                 </div>
               </div>
