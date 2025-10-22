@@ -48,7 +48,7 @@ const Reviews = () => {
   };
 
   return (
-    <div className="card">
+    <div className="card" id="reviews">
       <div style={{
         display: 'flex',
         justifyContent: 'space-between',
