@@ -17,58 +17,112 @@ const Header = () => {
         justifyContent: 'space-between'
       }}>
         <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '12px'
+          fontSize: '18px',
+          fontWeight: '600',
+          color: '#2c3e50'
         }}>
-          <div style={{
-            width: '40px',
-            height: '40px',
-            background: 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)',
-            borderRadius: '8px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: 'white',
-            fontSize: '20px',
-            fontWeight: '700'
-          }}>
-            HS
-          </div>
-          <span style={{
-            fontSize: '20px',
-            fontWeight: '600',
-            color: '#2c3e50'
-          }}>
-            Hollywood Sunset
-          </span>
+          Casa Caralago – Hollywood, FL
         </div>
         <nav style={{
           display: 'flex',
           gap: '32px',
           alignItems: 'center'
         }}>
-          <a href="#home" style={{
-            color: '#555',
-            textDecoration: 'none',
-            fontSize: '15px',
-            fontWeight: '500',
-            transition: 'color 0.2s'
-          }}>Home</a>
-          <a href="#properties" style={{
-            color: '#555',
-            textDecoration: 'none',
-            fontSize: '15px',
-            fontWeight: '500',
-            transition: 'color 0.2s'
-          }}>Properties</a>
-          <a href="#contact" style={{
-            color: '#555',
-            textDecoration: 'none',
-            fontSize: '15px',
-            fontWeight: '500',
-            transition: 'color 0.2s'
-          }}>Contact Us</a>
+          <a 
+            href="#photos" 
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            style={{
+              color: '#555',
+              textDecoration: 'none',
+              fontSize: '15px',
+              fontWeight: '500',
+              transition: 'color 0.2s',
+              cursor: 'pointer'
+            }}
+            onMouseEnter={(e) => e.target.style.color = '#3b82f6'}
+            onMouseLeave={(e) => e.target.style.color = '#555'}
+          >
+            Photos
+          </a>
+          <a 
+            href="#amenities" 
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('amenities')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            style={{
+              color: '#555',
+              textDecoration: 'none',
+              fontSize: '15px',
+              fontWeight: '500',
+              transition: 'color 0.2s',
+              cursor: 'pointer'
+            }}
+            onMouseEnter={(e) => e.target.style.color = '#3b82f6'}
+            onMouseLeave={(e) => e.target.style.color = '#555'}
+          >
+            Amenities
+          </a>
+          <a 
+            href="#reviews" 
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('reviews')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            style={{
+              color: '#555',
+              textDecoration: 'none',
+              fontSize: '15px',
+              fontWeight: '500',
+              transition: 'color 0.2s',
+              cursor: 'pointer'
+            }}
+            onMouseEnter={(e) => e.target.style.color = '#3b82f6'}
+            onMouseLeave={(e) => e.target.style.color = '#555'}
+          >
+            Reviews
+          </a>
+          <a 
+            href="#location" 
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('location')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            style={{
+              color: '#555',
+              textDecoration: 'none',
+              fontSize: '15px',
+              fontWeight: '500',
+              transition: 'color 0.2s',
+              cursor: 'pointer'
+            }}
+            onMouseEnter={(e) => e.target.style.color = '#3b82f6'}
+            onMouseLeave={(e) => e.target.style.color = '#555'}
+          >
+            Location
+          </a>
+          <a 
+            href="#contact" 
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            style={{
+              color: '#555',
+              textDecoration: 'none',
+              fontSize: '15px',
+              fontWeight: '500',
+              transition: 'color 0.2s',
+              cursor: 'pointer'
+            }}
+            onMouseEnter={(e) => e.target.style.color = '#3b82f6'}
+            onMouseLeave={(e) => e.target.style.color = '#555'}
+          >
+            Contact Us
+          </a>
         </nav>
       </div>
     </header>
