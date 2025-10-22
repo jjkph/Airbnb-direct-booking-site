@@ -9,6 +9,7 @@ import Features from './components/Features';
 import Reviews from './components/Reviews';
 import Location from './components/Location';
 import ContactUs from './components/ContactUs';
+import ThingsToKnow from './components/ThingsToKnow';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Reviews />
             <Location />
             <ContactUs />
+            <ThingsToKnow />
           </div>
           <div>
             <BookingWidget />
