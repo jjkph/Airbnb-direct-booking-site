@@ -101,20 +101,35 @@ const HeroGallery = () => {
             </span>
           </div>
 
+          <h1 style={{ margin: 0, marginBottom: '12px' }}>Casa Caralago ~ Waterfront Luxury ~ 3 BR ~ 5 mins to Beach</h1>
           <div style={{
             display: 'flex',
-            justifyContent: 'space-between',
             alignItems: 'center',
+            gap: '8px',
             marginBottom: '24px'
           }}>
-            <h1 style={{ margin: 0 }}>Hollywood Sunset on the Water</h1>
-            <div style={{
-              fontSize: '18px',
-              fontWeight: '600',
-              color: '#555'
-            }}>
-              Price on call
+            <div style={{ display: 'flex', gap: '2px' }}>
+              {[...Array(5)].map((_, i) => (
+                <svg key={i} width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24" stroke="none">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+              ))}
             </div>
+            <a 
+              href="#reviews" 
+              style={{
+                color: '#3b82f6',
+                textDecoration: 'none',
+                fontSize: '15px',
+                fontWeight: '500'
+              }}
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('reviews')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              [#] reviews
+            </a>
           </div>
         </div>
       </div>
