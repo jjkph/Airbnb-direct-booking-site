@@ -82,7 +82,7 @@ const HeroGallery = () => {
             <span>/</span>
             <a href="#" style={{ color: '#999', textDecoration: 'none' }}>PROPERTIES</a>
             <span>/</span>
-            <span style={{ color: '#555' }}>HOLLYWOOD SUNSET ON THE WATER</span>
+            <span style={{ color: '#555' }}>CASA CARALAGO</span>
           </div>
 
           {/* Status Badge & Title */}
