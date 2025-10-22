@@ -18,7 +18,7 @@ Fast Wi-Fi & dedicated workspace
 
 Ready for stunning waterfront sunsets and easy beach days? Book your stay now—paradise awaits!
 
-The space
+**The space**
 Enjoy sunset and serenity on the water, a fully remodeled 3 bed / 3 bath home. The bedrooms include 1 king bed, 1 queen bed, and 2 twins that can be converted to a king -- all with spotless, luxury bedding. The den provides a comfortable queen-sized pullout sofa bed.
 
 The sleek chef's kitchen opens to the living and dining room and then gorgeous long views of the canal lake with amazing sunsets.
@@ -29,7 +29,7 @@ Five minutes from the beaches of Hollywood and its famous "Broadwalk", voted one
 
 Only 10 minutes from Fort Lauderdale - Hollywood airport (FLL) and 30 minutes from MIA airport.
 
-Guest access
+**Guest access**
 Guests have full access to the backyard
 Self check-in
 Free parking (3 spaces)
