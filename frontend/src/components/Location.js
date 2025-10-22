@@ -1,8 +1,10 @@
 import React from 'react';
 
 const Location = () => {
-  const address = "920 N 11th Ct, Hollywood, FL 33019";
   const apiKey = "AIzaSyA6oM8ZrcqvbFsjZwfBDpkefMyEpreix54";
+  // Center coordinates for the general Hollywood Beach area
+  const lat = 26.0112;
+  const lng = -80.1495;
   
   return (
     <div className="card" id="location">
@@ -12,23 +14,26 @@ const Location = () => {
         marginBottom: '20px'
       }}>
         <div style={{
-          fontSize: '14px',
-          color: '#999',
-          marginBottom: '8px'
-        }}>Address</div>
-        <div style={{
           fontSize: '16px',
           fontWeight: '500',
           color: '#2c3e50',
-          marginBottom: '4px'
+          marginBottom: '8px'
         }}>
           Hollywood Waterfront District
         </div>
         <div style={{
           fontSize: '15px',
-          color: '#555'
+          color: '#555',
+          marginBottom: '12px'
         }}>
           Hollywood, Florida
+        </div>
+        <div style={{
+          fontSize: '14px',
+          color: '#666',
+          lineHeight: '1.6'
+        }}>
+          <strong>Minutes from the beach</strong> - Our waterfront property offers easy access to Hollywood Beach and the famous Broadwalk. Enjoy the perfect blend of serene waterfront living with quick access to beach activities.
         </div>
       </div>
 
@@ -45,9 +50,9 @@ const Location = () => {
           height="100%"
           frameBorder="0"
           style={{ border: 0 }}
-          src={`https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${encodeURIComponent(address)}&zoom=15`}
+          src={`https://www.google.com/maps/embed/v1/view?key=${apiKey}&center=${lat},${lng}&zoom=13&maptype=roadmap`}
           allowFullScreen
-          title="Property Location Map"
+          title="Property Location - Hollywood Beach Area"
         ></iframe>
       </div>
     </div>
