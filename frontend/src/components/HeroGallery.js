@@ -29,6 +29,31 @@ const HeroGallery = () => {
       url: 'https://customer-assets.emergentagent.com/job_hollywood-retreat/artifacts/hflvwvk3_05.%20Open%20concept%20living.JPG',
       title: 'Open Concept Living',
       alt: 'Open concept living space'
+    },
+    {
+      url: 'https://customer-assets.emergentagent.com/job_hollywood-retreat/artifacts/qzf73tzk_06.%20Bedroom%202%20-%20Queen.JPG',
+      title: 'Bedroom 2 - Queen',
+      alt: 'Queen bedroom suite'
+    },
+    {
+      url: 'https://customer-assets.emergentagent.com/job_hollywood-retreat/artifacts/p6i2yhd0_07.%20Bedroom%203%20-%20Twins%20convertible%20to%20king.JPG',
+      title: 'Bedroom 3 - Twins Convertible to King',
+      alt: 'Twin beds convertible to king'
+    },
+    {
+      url: 'https://customer-assets.emergentagent.com/job_hollywood-retreat/artifacts/rf7z59wq_08.%20Bathroom%201.JPG',
+      title: 'Bathroom 1',
+      alt: 'Modern bathroom with teal accents'
+    },
+    {
+      url: 'https://customer-assets.emergentagent.com/job_hollywood-retreat/artifacts/c76y1ofy_09.%20Den%20with%20queen%20Crate%20%26%20Barrel%20sleeper%20sofa.JPG',
+      title: 'Den with Queen Sleeper Sofa',
+      alt: 'Cozy den with Crate & Barrel sleeper sofa'
+    },
+    {
+      url: 'https://customer-assets.emergentagent.com/job_hollywood-retreat/artifacts/e5nfxomd_10.%20Bathroom%202.JPG',
+      title: 'Bathroom 2',
+      alt: 'Elegant bathroom with marble countertops'
     }
   ];
 
