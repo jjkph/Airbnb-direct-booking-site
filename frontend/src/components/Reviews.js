@@ -6,177 +6,119 @@ const Reviews = () => {
       name: 'Sarah M.',
       date: 'January 2025',
       rating: 5,
-      comment: 'Absolutely stunning property! The waterfront views were breathtaking, and the amenities exceeded our expectations. The home was immaculate and beautifully decorated. We enjoyed every moment of our stay.',
-      avatar: 'SM'
+      comment: 'Absolutely stunning property! The waterfront views were breathtaking, and the amenities exceeded our expectations. The home was immaculate and beautifully decorated. We enjoyed every moment of our stay.'
     },
     {
-      name: 'Michael & Jennifer R.',
+      name: 'Michael R.',
       date: 'December 2024',
       rating: 5,
-      comment: 'Perfect location for our family vacation. The pool and hot tub were amazing, and the kids loved having direct water access. The host was incredibly responsive and helpful. Highly recommend!',
-      avatar: 'MJ'
+      comment: 'Perfect location for our family vacation. The property was exactly as described. The host was incredibly responsive and helpful. Highly recommend!'
     },
     {
       name: 'David L.',
       date: 'November 2024',
       rating: 5,
-      comment: 'This property is a hidden gem. The attention to detail is remarkable, from the luxury linens to the fully stocked kitchen. The sunset views from the balcony are unforgettable. Will definitely return!',
-      avatar: 'DL'
+      comment: 'This property is a hidden gem. The attention to detail is remarkable. The sunset views are unforgettable. Will definitely return!'
     },
     {
-      name: 'Emily & Thomas W.',
+      name: 'Emily W.',
       date: 'October 2024',
       rating: 5,
-      comment: 'Our stay was nothing short of perfect. The home is even more beautiful in person. Every room has a view, and the outdoor space is incredible. Great for entertaining and relaxing alike.',
-      avatar: 'ET'
-    },
-    {
-      name: 'Rachel P.',
-      date: 'September 2024',
-      rating: 5,
-      comment: 'An exceptional property in every way. The location is unbeatable, the home is luxurious and comfortable, and the amenities are top-notch. This was truly a five-star experience.',
-      avatar: 'RP'
-    },
-    {
-      name: 'James & Lisa K.',
-      date: 'August 2024',
-      rating: 5,
-      comment: 'We celebrated our anniversary here and it could not have been more perfect. Romantic, peaceful, and absolutely beautiful. The host thought of everything. Thank you for an unforgettable stay!',
-      avatar: 'JL'
+      comment: 'Our stay was nothing short of perfect. The home is even more beautiful in person. Every room has a view, and the outdoor space is incredible.'
     }
   ];
 
   const renderStars = (rating) => {
     return (
-      <div style={{ display: 'flex', gap: '4px' }}>
+      <div style={{ display: 'flex', gap: '2px' }}>
         {[...Array(5)].map((_, index) => (
-          <span
+          <svg
             key={index}
-            style={{
-              color: index < rating ? 'var(--text-primary)' : 'var(--border-light)',
-              fontSize: '16px'
-            }}
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill={index < rating ? '#fbbf24' : '#e5e7eb'}
+            stroke="none"
           >
-            ★
-          </span>
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+          </svg>
         ))}
       </div>
     );
   };
 
   return (
-    <section id="reviews" style={{
-      background: 'var(--bg-primary)',
-      padding: '120px 0'
-    }}>
-      <div className="container">
-        <div style={{ textAlign: 'center', marginBottom: '64px' }}>
-          <h2 className="heading-1">Guest Experiences</h2>
-          <p className="body-large" style={{ color: 'var(--text-secondary)', marginTop: '16px' }}>
-            Hear from our delighted guests
-          </p>
-          <div style={{ 
-            display: 'flex', 
-            alignItems: 'center', 
-            justifyContent: 'center',
-            gap: '12px',
-            marginTop: '24px'
-          }}>
-            {renderStars(5)}
-            <span className="body-regular" style={{ color: 'var(--text-primary)', fontWeight: '500' }}>
-              5.0 · {reviews.length} Reviews
-            </span>
-          </div>
-        </div>
-
+    <div className="card">
+      <div style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginBottom: '24px'
+      }}>
+        <h2 style={{ margin: 0 }}>Guest Reviews</h2>
         <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
-          gap: '32px'
+          display: 'flex',
+          alignItems: 'center',
+          gap: '8px'
         }}>
-          {reviews.map((review, index) => (
-            <div
-              key={index}
-              style={{
-                background: 'white',
-                padding: '32px',
-                border: '1px solid var(--border-light)',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '16px'
-              }}
-              className="hover-lift"
-            >
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-                  <div style={{
-                    width: '48px',
-                    height: '48px',
-                    background: 'var(--bg-secondary)',
-                    border: '1px solid var(--border-light)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontWeight: '500',
-                    color: 'var(--text-primary)'
-                  }}>
-                    {review.avatar}
-                  </div>
-                  <div>
-                    <p style={{ 
-                      margin: 0, 
-                      fontWeight: '500', 
-                      fontSize: '16px',
-                      color: 'var(--text-primary)'
-                    }}>
-                      {review.name}
-                    </p>
-                    <p className="body-small" style={{ margin: 0, color: 'var(--text-light)' }}>
-                      {review.date}
-                    </p>
-                  </div>
-                </div>
-                {renderStars(review.rating)}
-              </div>
-              <p className="body-regular" style={{ 
-                color: 'var(--text-secondary)',
-                lineHeight: '1.7',
-                margin: 0
-              }}>
-                "{review.comment}"
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div style={{
-          marginTop: '64px',
-          textAlign: 'center',
-          padding: '48px',
-          background: 'var(--bg-secondary)',
-          border: '1px solid var(--border-light)'
-        }}>
-          <h3 className="heading-2" style={{ marginBottom: '16px' }}>Ready to Create Your Own Memories?</h3>
-          <p className="body-regular" style={{ 
-            color: 'var(--text-secondary)',
-            marginBottom: '32px',
-            maxWidth: '600px',
-            margin: '0 auto 32px'
-          }}>
-            Join our community of satisfied guests and experience luxury waterfront living at its finest.
-          </p>
-          <button 
-            className="btn-primary"
-            onClick={() => {
-              const element = document.getElementById('booking-widget');
-              if (element) element.scrollIntoView({ behavior: 'smooth' });
-            }}
-          >
-            Book Your Stay Now
-          </button>
+          {renderStars(5)}
+          <span style={{
+            fontSize: '16px',
+            fontWeight: '600',
+            color: '#2c3e50'
+          }}>5.0 ({reviews.length} reviews)</span>
         </div>
       </div>
-    </section>
+
+      <div style={{
+        display: 'grid',
+        gap: '16px'
+      }}>
+        {reviews.map((review, index) => (
+          <div
+            key={index}
+            style={{
+              padding: '20px',
+              background: '#f9fafb',
+              borderRadius: '8px',
+              border: '1px solid #e5e7eb'
+            }}
+          >
+            <div style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'flex-start',
+              marginBottom: '12px'
+            }}>
+              <div>
+                <div style={{
+                  fontWeight: '600',
+                  color: '#2c3e50',
+                  marginBottom: '4px'
+                }}>
+                  {review.name}
+                </div>
+                <div style={{
+                  fontSize: '13px',
+                  color: '#999'
+                }}>
+                  {review.date}
+                </div>
+              </div>
+              {renderStars(review.rating)}
+            </div>
+            <p style={{
+              margin: 0,
+              fontSize: '15px',
+              lineHeight: '1.6',
+              color: '#555'
+            }}>
+              {review.comment}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 
