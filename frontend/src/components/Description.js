@@ -141,7 +141,7 @@ The home is in a quiet, residential neighborhood and the City of Hollywood enfor
                   .map(line => line.trim())
                   .join('<br />')
               }}
-            >
+            />
           </div>
         </div>
       )}
