@@ -325,7 +325,7 @@ const HeroGallery = () => {
                 onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
                 onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
               />
-              {/* +5 View More Overlay */}
+              {/* +10 View More Overlay */}
               <div style={{
                 position: 'absolute',
                 bottom: '16px',
@@ -340,7 +340,7 @@ const HeroGallery = () => {
                 transition: 'all 0.2s',
                 backdropFilter: 'blur(8px)'
               }}>
-                + 5<br/>
+                + 10<br/>
                 <span style={{ fontSize: '12px', fontWeight: '400' }}>VIEW MORE</span>
               </div>
             </div>
