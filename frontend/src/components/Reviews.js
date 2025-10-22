@@ -112,77 +112,216 @@ const Reviews = () => {
   };
 
   return (
-    <div className="card" id="reviews">
-      <div style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        marginBottom: '24px'
-      }}>
-        <h2 style={{ margin: 0 }}>Guest Reviews</h2>
+    <>
+      <div className="card" id="reviews">
         <div style={{
           display: 'flex',
+          justifyContent: 'space-between',
           alignItems: 'center',
-          gap: '8px'
+          marginBottom: '24px'
         }}>
-          {renderStars(5)}
-          <span style={{
-            fontSize: '16px',
-            fontWeight: '600',
-            color: '#2c3e50'
-          }}>5.0 ({reviews.length} reviews)</span>
+          <h2 style={{ margin: 0 }}>Guest Reviews</h2>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px'
+          }}>
+            {renderStars(5)}
+            <span style={{
+              fontSize: '16px',
+              fontWeight: '600',
+              color: '#2c3e50'
+            }}>5.0 ({allReviews.length} reviews)</span>
+          </div>
+        </div>
+
+        <div style={{
+          display: 'grid',
+          gap: '16px'
+        }}>
+          {initialReviews.map((review, index) => (
+            <div
+              key={index}
+              style={{
+                padding: '20px',
+                background: '#f9fafb',
+                borderRadius: '8px',
+                border: '1px solid #e5e7eb'
+              }}
+            >
+              <div style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'flex-start',
+                marginBottom: '12px'
+              }}>
+                <div>
+                  <div style={{
+                    fontWeight: '600',
+                    color: '#2c3e50',
+                    marginBottom: '4px'
+                  }}>
+                    {review.name}
+                  </div>
+                  <div style={{
+                    fontSize: '13px',
+                    color: '#999'
+                  }}>
+                    {review.date}
+                  </div>
+                </div>
+                {renderStars(review.rating)}
+              </div>
+              <p style={{
+                margin: 0,
+                fontSize: '15px',
+                lineHeight: '1.6',
+                color: '#555'
+              }}>
+                {review.comment}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Show All Reviews Button */}
+        <div style={{ textAlign: 'center', marginTop: '24px' }}>
+          <button
+            onClick={() => setShowAllReviews(true)}
+            className="btn-primary"
+            style={{ width: 'auto' }}
+          >
+            Show All Reviews
+          </button>
         </div>
       </div>
 
-      <div style={{
-        display: 'grid',
-        gap: '16px'
-      }}>
-        {reviews.map((review, index) => (
+      {/* All Reviews Modal */}
+      {showAllReviews && (
+        <div
+          onClick={() => setShowAllReviews(false)}
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'rgba(0,0,0,0.6)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 1000,
+            padding: '40px'
+          }}
+        >
           <div
-            key={index}
+            onClick={(e) => e.stopPropagation()}
             style={{
-              padding: '20px',
-              background: '#f9fafb',
-              borderRadius: '8px',
-              border: '1px solid #e5e7eb'
+              background: 'white',
+              borderRadius: '12px',
+              padding: '40px',
+              maxWidth: '900px',
+              maxHeight: '80vh',
+              overflow: 'auto',
+              position: 'relative',
+              width: '100%'
             }}
           >
+            <button
+              onClick={() => setShowAllReviews(false)}
+              style={{
+                position: 'absolute',
+                top: '16px',
+                right: '16px',
+                background: '#f3f4f6',
+                border: 'none',
+                width: '32px',
+                height: '32px',
+                borderRadius: '50%',
+                cursor: 'pointer',
+                fontSize: '20px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: '#666'
+              }}
+            >
+              ×
+            </button>
+            
             <div style={{
               display: 'flex',
               justifyContent: 'space-between',
-              alignItems: 'flex-start',
-              marginBottom: '12px'
+              alignItems: 'center',
+              marginBottom: '32px'
             }}>
-              <div>
-                <div style={{
+              <h2 style={{ margin: 0 }}>All Guest Reviews</h2>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px'
+              }}>
+                {renderStars(5)}
+                <span style={{
+                  fontSize: '16px',
                   fontWeight: '600',
-                  color: '#2c3e50',
-                  marginBottom: '4px'
-                }}>
-                  {review.name}
-                </div>
-                <div style={{
-                  fontSize: '13px',
-                  color: '#999'
-                }}>
-                  {review.date}
-                </div>
+                  color: '#2c3e50'
+                }}>5.0 ({allReviews.length} reviews)</span>
               </div>
-              {renderStars(review.rating)}
             </div>
-            <p style={{
-              margin: 0,
-              fontSize: '15px',
-              lineHeight: '1.6',
-              color: '#555'
+
+            <div style={{
+              display: 'grid',
+              gap: '16px'
             }}>
-              {review.comment}
-            </p>
+              {allReviews.map((review, index) => (
+                <div
+                  key={index}
+                  style={{
+                    padding: '20px',
+                    background: '#f9fafb',
+                    borderRadius: '8px',
+                    border: '1px solid #e5e7eb'
+                  }}
+                >
+                  <div style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'flex-start',
+                    marginBottom: '12px'
+                  }}>
+                    <div>
+                      <div style={{
+                        fontWeight: '600',
+                        color: '#2c3e50',
+                        marginBottom: '4px'
+                      }}>
+                        {review.name}
+                      </div>
+                      <div style={{
+                        fontSize: '13px',
+                        color: '#999'
+                      }}>
+                        {review.date}
+                      </div>
+                    </div>
+                    {renderStars(review.rating)}
+                  </div>
+                  <p style={{
+                    margin: 0,
+                    fontSize: '15px',
+                    lineHeight: '1.6',
+                    color: '#555'
+                  }}>
+                    {review.comment}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
-        ))}
-      </div>
-    </div>
+        </div>
+      )}
+    </>
   );
 };
 
