@@ -21,7 +21,7 @@ const Header = () => {
           fontWeight: '600',
           color: '#2c3e50'
         }}>
-          Casa Caralago – Hollywood, FL
+          Casa Caralago
         </div>
         <nav style={{
           display: 'flex',
