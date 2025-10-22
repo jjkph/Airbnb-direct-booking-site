@@ -1,13 +1,58 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const Location = () => {
+  const mapRef = useRef(null);
   const apiKey = "AIzaSyA6oM8ZrcqvbFsjZwfBDpkefMyEpreix54";
-  // Property coordinates
-  const propertyLat = 26.0112;
-  const propertyLng = -80.1495;
-  // Center coordinates shifted down to show more of the beach/ocean
-  const centerLat = 26.0180;
-  const centerLng = -80.1495;
+  
+  useEffect(() => {
+    // Load Google Maps script
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}`;
+    script.async = true;
+    script.defer = true;
+    
+    script.onload = () => {
+      if (mapRef.current && window.google) {
+        // Property location
+        const propertyLocation = { lat: 26.0112, lng: -80.1495 };
+        // Center shifted down to show more beach
+        const mapCenter = { lat: 26.0180, lng: -80.1495 };
+        
+        const map = new window.google.maps.Map(mapRef.current, {
+          center: mapCenter,
+          zoom: 13,
+          mapTypeControl: false,
+          streetViewControl: false,
+          fullscreenControl: true,
+        });
+        
+        // Add marker at property location
+        new window.google.maps.Marker({
+          position: propertyLocation,
+          map: map,
+          title: 'Casa Caralago',
+          icon: {
+            path: window.google.maps.SymbolPath.CIRCLE,
+            scale: 10,
+            fillColor: '#3b82f6',
+            fillOpacity: 1,
+            strokeColor: '#ffffff',
+            strokeWeight: 3,
+          }
+        });
+      }
+    };
+    
+    if (!document.querySelector(`script[src*="maps.googleapis.com"]`)) {
+      document.head.appendChild(script);
+    } else if (window.google && mapRef.current) {
+      script.onload();
+    }
+    
+    return () => {
+      // Cleanup if needed
+    };
+  }, [apiKey]);
   
   return (
     <div className="card" id="location">
@@ -40,47 +85,17 @@ const Location = () => {
         </div>
       </div>
 
-      {/* Google Map with marker */}
-      <div style={{
-        width: '100%',
-        height: '400px',
-        borderRadius: '12px',
-        overflow: 'hidden',
-        border: '1px solid #e5e7eb'
-      }}>
-        <iframe
-          width="100%"
-          height="100%"
-          frameBorder="0"
-          style={{ border: 0 }}
-          src={`https://www.google.com/maps/embed/v1/view?key=${apiKey}&center=${centerLat},${centerLng}&zoom=13&maptype=roadmap`}
-          allowFullScreen
-          title="Property Location - Hollywood Beach Area"
-        ></iframe>
-        {/* Marker overlay */}
-        <div style={{
-          position: 'relative',
-          marginTop: '-200px',
-          pointerEvents: 'none',
-          zIndex: 10
-        }}>
-          <svg
-            width="40"
-            height="40"
-            viewBox="0 0 24 24"
-            fill="#3b82f6"
-            style={{
-              position: 'absolute',
-              left: '50%',
-              top: '50%',
-              transform: 'translate(-50%, -100%)',
-              filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))'
-            }}
-          >
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-          </svg>
-        </div>
-      </div>
+      {/* Google Map */}
+      <div 
+        ref={mapRef}
+        style={{
+          width: '100%',
+          height: '400px',
+          borderRadius: '12px',
+          overflow: 'hidden',
+          border: '1px solid #e5e7eb'
+        }}
+      ></div>
     </div>
   );
 };
