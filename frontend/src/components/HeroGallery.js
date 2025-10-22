@@ -5,10 +5,31 @@ const HeroGallery = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [
-    'https://images.unsplash.com/photo-1759020623226-73ec7a068b11',
-    'https://images.unsplash.com/photo-1678922270109-14d0700f8088',
-    'https://images.unsplash.com/photo-1729605412224-147d072d3667',
-    'https://images.pexels.com/photos/34379202/pexels-photo-34379202.jpeg'
+    {
+      url: 'https://customer-assets.emergentagent.com/job_hollywood-retreat/artifacts/oz6mx42l_01.%20Backyard%20sunset.jpg',
+      title: 'Backyard Sunset',
+      alt: 'Stunning backyard sunset view'
+    },
+    {
+      url: 'https://customer-assets.emergentagent.com/job_hollywood-retreat/artifacts/6n9m2ovu_02.%20chef%27s%20kitchen.JPG',
+      title: "Chef's Kitchen",
+      alt: "Gourmet chef's kitchen"
+    },
+    {
+      url: 'https://customer-assets.emergentagent.com/job_hollywood-retreat/artifacts/e98qdkgs_03.%20Bedroom%201%20-%20Primary.JPG',
+      title: 'Primary Bedroom',
+      alt: 'Bedroom 1 - Primary bedroom suite'
+    },
+    {
+      url: 'https://customer-assets.emergentagent.com/job_hollywood-retreat/artifacts/aff2letx_04.%20Spacious%20patio.jpg',
+      title: 'Spacious Patio',
+      alt: 'Spacious outdoor patio area'
+    },
+    {
+      url: 'https://customer-assets.emergentagent.com/job_hollywood-retreat/artifacts/hflvwvk3_05.%20Open%20concept%20living.JPG',
+      title: 'Open Concept Living',
+      alt: 'Open concept living space'
+    }
   ];
 
   const openGallery = (index) => {
