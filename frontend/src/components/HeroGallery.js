@@ -101,7 +101,7 @@ const HeroGallery = () => {
             </span>
           </div>
 
-          <h1 style={{ margin: 0, marginBottom: '12px' }}>Casa Caralago ~ Waterfront Luxury ~ 3 BR ~ 5 mins to Beach</h1>
+          <h1 style={{ margin: 0, marginBottom: '12px' }}>Casa Caralago: Waterfront Luxury, 5 Minutes to Beach</h1>
           <div style={{
             display: 'flex',
             alignItems: 'center',
