@@ -79,12 +79,15 @@ const HeroGallery = () => {
         padding: '0 0 24px 0'
       }}>
         <div className="container">
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: '1.5fr 1fr',
-            gap: '12px',
-            height: '500px'
-          }}>
+          <div 
+            className="hero-gallery-grid"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: '1.5fr 1fr',
+              gap: '12px',
+              height: '500px'
+            }}
+          >
             {/* Main Large Image */}
             <div 
               onClick={() => openGallery(0)}
