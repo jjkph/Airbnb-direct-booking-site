@@ -153,7 +153,7 @@ const HeroGallery = () => {
                 document.getElementById('reviews')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              7 reviews
+              14 reviews
             </a>
           </div>
         </div>
