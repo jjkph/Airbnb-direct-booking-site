@@ -44,7 +44,8 @@ function App() {
           gap: '24px', 
           marginTop: '24px',
           marginBottom: '48px',
-          alignItems: 'start'
+          alignItems: 'start',
+          overflow: 'visible'
         }}
         className="main-layout"
         >
@@ -57,7 +58,7 @@ function App() {
             <ContactUs />
             <ThingsToKnow />
           </div>
-          <div style={{ height: '100%', minHeight: '3000px' }}>
+          <div style={{ height: '100%', minHeight: '3000px', overflow: 'visible' }}>
             <BookingWidget />
           </div>
         </div>
