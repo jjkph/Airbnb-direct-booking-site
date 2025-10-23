@@ -57,6 +57,34 @@ const ContactUs = () => {
         Have questions about your stay? We're here to help. Send us a message and we'll get back to you as soon as possible.
       </p>
       
+      {status === 'success' && (
+        <div style={{
+          padding: '16px',
+          background: '#d1fae5',
+          border: '1px solid #34d399',
+          borderRadius: '8px',
+          marginBottom: '20px',
+          color: '#065f46',
+          fontSize: '15px'
+        }}>
+          ✓ Thank you! Your message has been sent successfully. We'll get back to you soon.
+        </div>
+      )}
+
+      {status === 'error' && (
+        <div style={{
+          padding: '16px',
+          background: '#fee2e2',
+          border: '1px solid #f87171',
+          borderRadius: '8px',
+          marginBottom: '20px',
+          color: '#991b1b',
+          fontSize: '15px'
+        }}>
+          ✗ There was an error sending your message. Please try again.
+        </div>
+      )}
+      
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
         <div>
           <label 
@@ -78,6 +106,7 @@ const ContactUs = () => {
             value={formData.name}
             onChange={handleChange}
             required
+            disabled={isSubmitting}
             style={{
               width: '100%',
               padding: '12px 16px',
@@ -85,7 +114,8 @@ const ContactUs = () => {
               borderRadius: '8px',
               fontSize: '15px',
               fontFamily: 'inherit',
-              transition: 'border-color 0.2s ease'
+              transition: 'border-color 0.2s ease',
+              opacity: isSubmitting ? 0.6 : 1
             }}
             onFocus={(e) => e.target.style.borderColor = '#3b82f6'}
             onBlur={(e) => e.target.style.borderColor = '#e5e7eb'}
@@ -112,6 +142,7 @@ const ContactUs = () => {
             value={formData.email}
             onChange={handleChange}
             required
+            disabled={isSubmitting}
             style={{
               width: '100%',
               padding: '12px 16px',
@@ -119,7 +150,8 @@ const ContactUs = () => {
               borderRadius: '8px',
               fontSize: '15px',
               fontFamily: 'inherit',
-              transition: 'border-color 0.2s ease'
+              transition: 'border-color 0.2s ease',
+              opacity: isSubmitting ? 0.6 : 1
             }}
             onFocus={(e) => e.target.style.borderColor = '#3b82f6'}
             onBlur={(e) => e.target.style.borderColor = '#e5e7eb'}
@@ -145,6 +177,7 @@ const ContactUs = () => {
             value={formData.message}
             onChange={handleChange}
             required
+            disabled={isSubmitting}
             rows="5"
             style={{
               width: '100%',
@@ -154,15 +187,21 @@ const ContactUs = () => {
               fontSize: '15px',
               fontFamily: 'inherit',
               resize: 'vertical',
-              transition: 'border-color 0.2s ease'
+              transition: 'border-color 0.2s ease',
+              opacity: isSubmitting ? 0.6 : 1
             }}
             onFocus={(e) => e.target.style.borderColor = '#3b82f6'}
             onBlur={(e) => e.target.style.borderColor = '#e5e7eb'}
           />
         </div>
 
-        <button type="submit" className="btn-primary" style={{ width: '100%' }}>
-          Send Message
+        <button 
+          type="submit" 
+          className="btn-primary" 
+          style={{ width: '100%' }}
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>
       </form>
     </div>
