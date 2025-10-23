@@ -79,17 +79,9 @@ const Location = () => {
         <div style={{
           fontSize: '14px',
           color: '#666',
-          lineHeight: '1.6',
-          marginBottom: '12px'
-        }}>
-          Located in Hollywood Lakes, this vacation home is 0.8 mi (1.3 km) from Hollywood Beach Golf Club and 2 mi (3.2 km) from Hollywood Beach. The ArtsPark at Young Circle and Hollywood Boulevard Historic Business District are also within 2 mi (3 km).
-        </div>
-        <div style={{
-          fontSize: '14px',
-          color: '#666',
           lineHeight: '1.6'
         }}>
-          <strong>Minutes from the beach</strong> - Our waterfront property offers easy access to Hollywood Beach and the famous Broadwalk. Enjoy the perfect blend of serene waterfront living with quick access to beach activities.
+          Located in Hollywood Lakes, this vacation home is 0.8 mi (1.3 km) from Hollywood Beach Golf Club and 2 mi (3.2 km) from Hollywood Beach. The ArtsPark at Young Circle and Hollywood Boulevard Historic Business District are also within 2 mi (3 km).
         </div>
       </div>
 
