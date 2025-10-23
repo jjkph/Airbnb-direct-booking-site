@@ -43,7 +43,8 @@ function App() {
           gridTemplateColumns: '1fr 400px', 
           gap: '24px', 
           marginTop: '24px',
-          marginBottom: '48px'
+          marginBottom: '48px',
+          alignItems: 'start'
         }}
         className="main-layout"
         >
@@ -56,7 +57,7 @@ function App() {
             <ContactUs />
             <ThingsToKnow />
           </div>
-          <div>
+          <div style={{ position: 'relative' }}>
             <BookingWidget />
           </div>
         </div>
