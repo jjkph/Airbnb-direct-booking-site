@@ -13,10 +13,10 @@ const Location = () => {
     
     script.onload = () => {
       if (mapRef.current && window.google) {
-        // 920 N 11th Ct, Hollywood, FL 33019 coordinates
-        const propertyLocation = { lat: 26.0192, lng: -80.1441 };
-        // Center shifted down slightly to show more beach
-        const mapCenter = { lat: 26.0240, lng: -80.1441 };
+        // 920 N 11th Ct, Hollywood, FL 33019 - corrected coordinates for Hollywood Lakes
+        const propertyLocation = { lat: 26.0193, lng: -80.1497 };
+        // Center map on property location
+        const mapCenter = { lat: 26.0193, lng: -80.1497 };
         
         const map = new window.google.maps.Map(mapRef.current, {
           center: mapCenter,
@@ -26,19 +26,11 @@ const Location = () => {
           fullscreenControl: true,
         });
         
-        // Add marker at property location
+        // Add marker at property location with standard red Google Maps pin
         new window.google.maps.Marker({
           position: propertyLocation,
           map: map,
-          title: 'Casa Caralago',
-          icon: {
-            path: window.google.maps.SymbolPath.CIRCLE,
-            scale: 10,
-            fillColor: '#3b82f6',
-            fillOpacity: 1,
-            strokeColor: '#ffffff',
-            strokeWeight: 3,
-          }
+          title: 'Casa Caralago - 920 N 11th Ct',
         });
       }
     };
