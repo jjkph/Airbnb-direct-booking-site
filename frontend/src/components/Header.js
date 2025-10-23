@@ -23,11 +23,14 @@ const Header = () => {
         }}>
           Casa Caralago
         </div>
-        <nav style={{
-          display: 'flex',
-          gap: '32px',
-          alignItems: 'center'
-        }}>
+        <nav 
+          className="desktop-nav"
+          style={{
+            display: 'flex',
+            gap: '32px',
+            alignItems: 'center'
+          }}
+        >
           <a 
             href="#photos" 
             onClick={(e) => {
@@ -46,25 +49,6 @@ const Header = () => {
             onMouseLeave={(e) => e.target.style.color = '#555'}
           >
             Photos
-          </a>
-          <a 
-            href="#amenities" 
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById('amenities')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            style={{
-              color: '#555',
-              textDecoration: 'none',
-              fontSize: '15px',
-              fontWeight: '500',
-              transition: 'color 0.2s',
-              cursor: 'pointer'
-            }}
-            onMouseEnter={(e) => e.target.style.color = '#3b82f6'}
-            onMouseLeave={(e) => e.target.style.color = '#555'}
-          >
-            Amenities
           </a>
           <a 
             href="#reviews" 
