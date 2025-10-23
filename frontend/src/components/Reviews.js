@@ -8,85 +8,86 @@ const Reviews = () => {
       name: 'Karen',
       date: 'September 2025',
       rating: 5,
-      comment: 'The place and host were AWESOME!. Jonna was very helpful and responsive. The house had all the amenities and was clean and tidy. It was a great place to use as a base and was peaceful to relax in at the end of the day. Absolutely recommend Jonna as a host and this house!'
-    },
-    {
-      name: 'Jonna',
-      date: 'May 2025',
-      rating: 5,
       comment: 'Jonna\'s place was amazing and she accommodated my family and I last minute when we had a terrible experience and another Airbnb. The home was perfect and very clean and the location is 5 min drive from the beach. If you\'re looking at booking just do it. Very peaceful.'
     },
     {
-      name: 'Tanisha',
+      name: 'Jennifer',
       date: 'July 2025',
-      rating: 5,
-      comment: 'Margarita'
-    },
-    {
-      name: 'Jason',
-      date: 'June 2025',
       rating: 5,
       comment: 'Beautiful last minute accommodation host was responsive and beautiful place'
     },
     {
-      name: 'Lian',
-      date: 'April 2025',
+      name: 'Margarita',
+      date: 'May 2025',
+      rating: 5,
+      comment: 'The place and host were AWESOME!. Jonna was very helpful and responsive. The house had all the amenities and was clean and tidy. It was a great place to use as a base and was peaceful to relax in at the end of the day. Absolutely recommend Jonna as a host and this house!'
+    },
+    {
+      name: 'Tanisha',
+      date: 'June 2025',
       rating: 5,
       comment: 'Jonna\'s house is beautifully decorated and in a lovely neighborhood! We really enjoyed our time walking to the nearby park and enjoying the view outside.'
     },
     {
-      name: 'Karen',
-      date: 'September 2024',
-      rating: 5,
-      comment: 'The place and host were AWESOME!. Jonna was very helpful and responsive. The house had all the amenities and was clean and tidy. It was a great place to use as a base and was peaceful to relax in at the end of the day. Absolutely recommend Jonna as a host and this house!'
-    },
-    {
-      name: 'Jennifer Salo',
-      date: 'September 2024',
+      name: 'Jason',
+      date: 'July 2025',
       rating: 5,
       comment: 'This by is far my favorite AIRBNB! Jonna and her family did an amazing anticipating the needs of her target audience when renovating her rental. The decor is amazing and is carried throughout the entire house. Jonna had top of the line linen, soaps, cleaners, appliances, furnishings and more. Enjoying a sunset from the back patio was the perfect way to end a day. I\'m looking forward to booking your home again in the future! Thank you for being such a wonderful Host!'
-    },
-    {
-      name: 'Marni',
-      date: 'July 2024',
-      rating: 5,
-      comment: 'Beautiful last minute accommodation host was responsive and beautiful place'
-    },
-    {
-      name: 'Amy',
-      date: 'July 2024',
-      rating: 5,
-      comment: 'We absolutely loved this house! The home was exceptionally clean, the decor was stunning and the view from the back patio was so beautiful and calming. The house was equipped with everything we needed from kitchen cookware and utensils to bathroom towels, shampoo, conditioner, etc. There were even beach towels, a beach blanket, chairs and an umbrella to use which was especially beneficial since we flew in for the trip and weren\'t able to bring those things with us. The house is in a very quiet, convenient location - just minutes from the beach and airport! We would love to stay here again!'
-    },
-    {
-      name: 'Sergio',
-      date: 'February 2025',
-      rating: 5,
-      comment: 'Excellent house, everything was very good'
-    },
-    {
-      name: 'Mauro',
-      date: 'February 2025',
-      rating: 5,
-      comment: 'Excellent stay. The unit was comfortable and spacious. Would stay again in the future.'
     },
     {
       name: 'Sheri',
       date: 'March 2025',
       rating: 5,
-      comment: 'Tanisha'
-    },
-    {
-      name: 'Mishka',
-      date: 'March 2025',
-      rating: 5,
       comment: 'We absolutely loved this house! The home was exceptionally clean, the decor was stunning and the view from the back patio was so beautiful and calming. The house was equipped with everything we needed from kitchen cookware and utensils to bathroom towels, shampoo, conditioner, etc. There were even beach towels, a beach blanket, chairs and an umbrella to use which was especially beneficial since we flew in for the trip and weren\'t able to bring those things with us. The house is in a very quiet, convenient location - just minutes from the beach and airport! We would love to stay here again!'
     },
     {
-      name: 'Tanisha',
+      name: 'Karen',
+      date: 'September 2025',
+      rating: 5,
+      comment: 'Excellent house, everything was very good',
+      translated: true
+    },
+    {
+      name: 'Lian',
+      date: 'April 2025',
+      rating: 5,
+      comment: 'Excellent stay. The unit was comfortable and spacious. Would stay again in the future.'
+    },
+    {
+      name: 'Salo',
+      date: 'June 2025',
+      rating: 5,
+      comment: ''
+    },
+    {
+      name: 'Marni',
+      date: 'September 2024',
+      rating: 5,
+      comment: ''
+    },
+    {
+      name: 'Amy',
+      date: 'July 2024',
+      rating: 5,
+      comment: ''
+    },
+    {
+      name: 'Sergio',
       date: 'July 2025',
       rating: 5,
-      comment: 'Margarita'
+      comment: ''
+    },
+    {
+      name: 'Mauro',
+      date: 'February 2025',
+      rating: 5,
+      comment: ''
+    },
+    {
+      name: 'Mishka',
+      date: 'September 2024',
+      rating: 5,
+      comment: ''
     }
   ];
 
