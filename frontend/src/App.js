@@ -64,7 +64,11 @@ function App() {
       
       {/* Mobile Floating Check Availability Button */}
       <div className="mobile-check-availability">
-        <button onClick={scrollToBooking}>
+        <button 
+          onClick={scrollToBooking}
+          type="button"
+          aria-label="Check Availability"
+        >
           Check Availability
         </button>
       </div>
