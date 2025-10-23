@@ -110,6 +110,13 @@ img {
 #booking-widget {
   position: -webkit-sticky; /* Safari */
   position: sticky;
+  top: 90px;
+  height: fit-content;
+}
+
+/* Ensure container doesn't interfere with sticky */
+.container {
+  position: relative;
 }
 
 @media (max-width: 1024px) {
