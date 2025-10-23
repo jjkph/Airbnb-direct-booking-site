@@ -12,10 +12,24 @@ import ContactUs from './components/ContactUs';
 import ThingsToKnow from './components/ThingsToKnow';
 
 function App() {
-  const scrollToBooking = () => {
+  const scrollToBooking = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    // Try multiple approaches for better mobile compatibility
     const bookingWidget = document.getElementById('booking-widget');
+    
     if (bookingWidget) {
-      bookingWidget.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // Get the position of the element
+      const rect = bookingWidget.getBoundingClientRect();
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const targetPosition = rect.top + scrollTop - 80; // 80px offset for header
+      
+      // Scroll to position
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
