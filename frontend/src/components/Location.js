@@ -20,7 +20,7 @@ const Location = () => {
         
         const map = new window.google.maps.Map(mapRef.current, {
           center: mapCenter,
-          zoom: 13,
+          zoom: 12,
           mapTypeControl: false,
           streetViewControl: false,
           fullscreenControl: true,
