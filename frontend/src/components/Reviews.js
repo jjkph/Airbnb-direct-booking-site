@@ -154,7 +154,7 @@ const Reviews = () => {
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'flex-start',
-                marginBottom: '12px'
+                marginBottom: review.comment ? '12px' : '0'
               }}>
                 <div>
                   <div style={{
@@ -163,6 +163,16 @@ const Reviews = () => {
                     marginBottom: '4px'
                   }}>
                     {review.name}
+                    {review.translated && (
+                      <span style={{
+                        fontSize: '12px',
+                        color: '#999',
+                        fontWeight: 'normal',
+                        marginLeft: '6px'
+                      }}>
+                        (Translated from Spanish)
+                      </span>
+                    )}
                   </div>
                   <div style={{
                     fontSize: '13px',
@@ -173,14 +183,16 @@ const Reviews = () => {
                 </div>
                 {renderStars(review.rating)}
               </div>
-              <p style={{
-                margin: 0,
-                fontSize: '15px',
-                lineHeight: '1.6',
-                color: '#555'
-              }}>
-                {review.comment}
-              </p>
+              {review.comment && (
+                <p style={{
+                  margin: 0,
+                  fontSize: '15px',
+                  lineHeight: '1.6',
+                  color: '#555'
+                }}>
+                  {review.comment}
+                </p>
+              )}
             </div>
           ))}
         </div>
