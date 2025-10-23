@@ -6,13 +6,41 @@ const ContactUs = () => {
     email: '',
     message: ''
   });
+  const [status, setStatus] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const { name, email, message } = formData;
-    const subject = `Inquiry from ${name}`;
-    const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
-    window.location.href = `mailto:contact@casacaralago.com?subject=${subject}&body=${body}`;
+    setIsSubmitting(true);
+    setStatus('');
+
+    try {
+      const response = await fetch('https://formspree.io/f/xwpkbylw', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _replyto: formData.email,
+          _subject: `Casa Caralago Inquiry from ${formData.name}`,
+          _cc: 'jonnapeat@yahoo.com,service@myrealtorjhana.com'
+        })
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
