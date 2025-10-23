@@ -137,24 +137,41 @@ img {
   
   .card {
     padding: 24px;
+    width: 100%;
+    max-width: 100%;
   }
   
   .container {
     padding: 0 16px;
+    width: 100%;
+    max-width: 100vw;
   }
   
   .hero-gallery-grid {
     grid-template-columns: 1fr !important;
     height: auto !important;
+    width: 100%;
   }
   
   .hero-gallery-grid > div {
     height: 300px !important;
+    width: 100%;
   }
   
   .things-to-know-grid {
     grid-template-columns: 1fr !important;
     gap: 32px !important;
+  }
+  
+  .main-layout {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Ensure all images are constrained */
+  img {
+    max-width: 100%;
+    height: auto;
   }
   
   /* Hide navigation links on mobile */
@@ -169,6 +186,7 @@ img {
     bottom: 0;
     left: 0;
     right: 0;
+    width: 100%;
     background: white;
     padding: 12px 16px;
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
