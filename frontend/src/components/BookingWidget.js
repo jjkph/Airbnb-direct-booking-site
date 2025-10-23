@@ -22,9 +22,10 @@ const BookingWidget = () => {
     <div 
       id="booking-widget"
       style={{
+        position: '-webkit-sticky',
         position: 'sticky',
         top: '90px',
-        alignSelf: 'flex-start'
+        height: 'fit-content'
       }}
     >
       <div className="card" style={{
