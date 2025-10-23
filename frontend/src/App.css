@@ -106,9 +106,19 @@ img {
 .mt-48 { margin-top: 48px; }
 
 /* Responsive */
+/* Ensure sticky positioning works */
+#booking-widget {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+}
+
 @media (max-width: 1024px) {
   .main-layout {
     grid-template-columns: 1fr !important;
+  }
+  
+  #booking-widget {
+    position: static; /* Disable sticky on tablet/mobile */
   }
 }
 
