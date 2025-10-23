@@ -40,7 +40,7 @@ function App() {
       <div className="container">
         <div style={{ 
           display: 'grid', 
-          gridTemplateColumns: '1fr 400px', 
+          gridTemplateColumns: '1fr 450px', 
           gap: '24px', 
           marginTop: '24px',
           marginBottom: '48px',
