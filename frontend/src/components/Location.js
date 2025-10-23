@@ -13,10 +13,10 @@ const Location = () => {
     
     script.onload = () => {
       if (mapRef.current && window.google) {
-        // 920 N 11th Ct, Hollywood, FL 33019 - corrected coordinates for Hollywood Lakes
-        const propertyLocation = { lat: 26.0193, lng: -80.1497 };
+        // 920 N 11th Ct, Hollywood, FL 33019 - Hollywood Lakes waterfront location
+        const propertyLocation = { lat: 26.0193, lng: -80.1445 };
         // Center map on property location
-        const mapCenter = { lat: 26.0193, lng: -80.1497 };
+        const mapCenter = { lat: 26.0193, lng: -80.1445 };
         
         const map = new window.google.maps.Map(mapRef.current, {
           center: mapCenter,
