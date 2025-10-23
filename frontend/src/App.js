@@ -57,7 +57,7 @@ function App() {
             <ContactUs />
             <ThingsToKnow />
           </div>
-          <div style={{ position: 'relative' }}>
+          <div>
             <BookingWidget />
           </div>
         </div>
