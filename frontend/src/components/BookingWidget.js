@@ -19,24 +19,29 @@ const BookingWidget = () => {
   }, []);
 
   return (
-    <div className="card" style={{
-      padding: '24px',
-      position: 'sticky',
-      top: '90px'
-    }}
-    id="booking-widget"
+    <div 
+      id="booking-widget"
+      style={{
+        position: 'sticky',
+        top: '90px',
+        alignSelf: 'start'
+      }}
     >
-      <h3 style={{ marginBottom: '20px', fontSize: '20px' }}>Book Your Stay</h3>
-      
-      {/* iGMS Booking Widget */}
-      <div
-        className="igms-direct-booking-widget"
-        id="directBooking1761143310578"
-        data-listing-id="d9dc4160-f346-4f50-92d1-e3583fbe19fa"
-        data-widget-color="#3b82f6"
-        data-text-check-availability="Check Availability"
-        data-text-book-now="Book Now"
-      ></div>
+      <div className="card" style={{
+        padding: '24px'
+      }}>
+        <h3 style={{ marginBottom: '20px', fontSize: '20px' }}>Book Your Stay</h3>
+        
+        {/* iGMS Booking Widget */}
+        <div
+          className="igms-direct-booking-widget"
+          id="directBooking1761143310578"
+          data-listing-id="d9dc4160-f346-4f50-92d1-e3583fbe19fa"
+          data-widget-color="#3b82f6"
+          data-text-check-availability="Check Availability"
+          data-text-book-now="Book Now"
+        ></div>
+      </div>
     </div>
   );
 };
