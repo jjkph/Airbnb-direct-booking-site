@@ -23,7 +23,8 @@ const BookingWidget = () => {
       id="booking-widget"
       style={{
         position: 'sticky',
-        top: '90px'
+        top: '90px',
+        alignSelf: 'flex-start'
       }}
     >
       <div className="card" style={{
