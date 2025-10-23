@@ -15,7 +15,8 @@ const ContactUs = () => {
     setStatus('');
 
     try {
-      const response = await fetch('https://formspree.io/f/xjkvolao', {
+      // TODO: Replace 'YOUR_FORM_ID' with your actual Formspree form ID from your account
+      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -25,7 +26,7 @@ const ContactUs = () => {
           email: formData.email,
           message: formData.message,
           _replyto: formData.email,
-          _subject: 'New inquiry from Casa Caralago website'
+          _subject: 'Direct Booking Inquiry: Hollywood 920'
         })
       });
 
