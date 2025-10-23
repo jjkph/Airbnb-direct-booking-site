@@ -44,7 +44,7 @@ function App() {
           gap: '24px', 
           marginTop: '24px',
           marginBottom: '48px',
-          alignItems: 'flex-start'
+          alignItems: 'start'
         }}
         className="main-layout"
         >
@@ -57,7 +57,7 @@ function App() {
             <ContactUs />
             <ThingsToKnow />
           </div>
-          <div style={{ minHeight: '100vh' }}>
+          <div style={{ height: '100%', minHeight: '3000px' }}>
             <BookingWidget />
           </div>
         </div>
