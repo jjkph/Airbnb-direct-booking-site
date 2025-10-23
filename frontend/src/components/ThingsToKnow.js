@@ -131,7 +131,7 @@ const ThingsToKnow = () => {
                 marginBottom: '12px',
                 lineHeight: '1.5'
               }}>
-                Guests can cancel up to 5 days before check-in with a full refund
+                Cancel ≥5 days before check-in: full refund.
               </li>
               <li style={{
                 fontSize: '15px',
@@ -139,7 +139,7 @@ const ThingsToKnow = () => {
                 marginBottom: '12px',
                 lineHeight: '1.5'
               }}>
-                If cancelled after 5 days before check-in, the guest pays for 1 extra night and 50% of the booking cost
+                Cancel &lt;5 days before check-in: pay 1 night + 50% of remaining.
               </li>
               <li style={{
                 fontSize: '15px',
@@ -147,7 +147,7 @@ const ThingsToKnow = () => {
                 marginBottom: '12px',
                 lineHeight: '1.5'
               }}>
-                After check-in, the guest pays for all of nights stayed, 1 extra night, and 50% of the rest the booked nights
+                After check-in: pay nights stayed + 1 night + 50% of remaining.
               </li>
             </ul>
           </div>
