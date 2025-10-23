@@ -19,10 +19,13 @@ const BookingWidget = () => {
   }, []);
 
   return (
-    <div style={{
-      position: 'sticky',
-      top: '90px'
-    }}>
+    <div 
+      id="booking-widget"
+      style={{
+        position: 'sticky',
+        top: '90px'
+      }}
+    >
       <div className="card" style={{
         padding: '24px'
       }}>
