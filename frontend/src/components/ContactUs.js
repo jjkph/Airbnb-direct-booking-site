@@ -14,10 +14,8 @@ const ContactUs = () => {
     setIsSubmitting(true);
     setStatus('');
 
-    const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-
     try {
-      const response = await fetch(`${BACKEND_URL}/api/contact`, {
+      const response = await fetch('https://formspree.io/f/xjkvolao', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -25,13 +23,13 @@ const ContactUs = () => {
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
-          message: formData.message
+          message: formData.message,
+          _replyto: formData.email,
+          _subject: 'New inquiry from Casa Caralago website'
         })
       });
 
-      const data = await response.json();
-
-      if (response.ok && data.success) {
+      if (response.ok) {
         setStatus('success');
         setFormData({ name: '', email: '', message: '' });
       } else {
