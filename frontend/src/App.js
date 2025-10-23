@@ -12,6 +12,13 @@ import ContactUs from './components/ContactUs';
 import ThingsToKnow from './components/ThingsToKnow';
 
 function App() {
+  const scrollToBooking = () => {
+    const bookingWidget = document.getElementById('booking-widget');
+    if (bookingWidget) {
+      bookingWidget.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
+
   return (
     <div className="App">
       <Header />
@@ -39,6 +46,13 @@ function App() {
             <BookingWidget />
           </div>
         </div>
+      </div>
+      
+      {/* Mobile Floating Check Availability Button */}
+      <div className="mobile-check-availability">
+        <button onClick={scrollToBooking}>
+          Check Availability
+        </button>
       </div>
     </div>
   );
