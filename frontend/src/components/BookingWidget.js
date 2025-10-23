@@ -24,11 +24,13 @@ const BookingWidget = () => {
       style={{
         position: 'sticky',
         top: '90px',
-        alignSelf: 'start'
+        alignSelf: 'start',
+        overflow: 'visible'
       }}
     >
       <div className="card" style={{
-        padding: '24px'
+        padding: '24px',
+        overflow: 'visible'
       }}>
         <h3 style={{ marginBottom: '20px', fontSize: '20px' }}>Book Your Stay</h3>
         
@@ -40,6 +42,7 @@ const BookingWidget = () => {
           data-widget-color="#3b82f6"
           data-text-check-availability="Check Availability"
           data-text-book-now="Book Now"
+          style={{ overflow: 'visible' }}
         ></div>
       </div>
     </div>
