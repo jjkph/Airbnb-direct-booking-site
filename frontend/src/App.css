@@ -173,9 +173,15 @@ img {
     font-weight: 600;
     cursor: pointer;
     transition: background 0.3s ease;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
   }
   
   .mobile-check-availability button:active {
+    background: #2563eb;
+  }
+  
+  .mobile-check-availability button:hover {
     background: #2563eb;
   }
 }
