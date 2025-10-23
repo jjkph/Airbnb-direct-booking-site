@@ -87,6 +87,13 @@ p {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
+/* Allow booking widget to overflow for calendar */
+#booking-widget,
+#booking-widget .card,
+#booking-widget .igms-direct-booking-widget {
+  overflow: visible !important;
+}
+
 /* Rounded Images */
 img {
   border-radius: 12px;
