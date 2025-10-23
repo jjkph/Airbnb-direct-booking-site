@@ -119,6 +119,17 @@ img {
 }
 
 @media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+  
+  .App {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  
   h1 {
     font-size: 26px;
   }
@@ -137,6 +148,7 @@ img {
     padding: 0 16px;
     width: 100%;
     max-width: 100vw;
+    box-sizing: border-box;
   }
   
   .hero-gallery-grid {
