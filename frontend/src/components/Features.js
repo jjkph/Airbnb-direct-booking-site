@@ -16,11 +16,14 @@ const Features = () => {
   return (
     <div className="card" id="amenities">
       <h2>Features</h2>
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)',
-        gap: '12px'
-      }}>
+      <div 
+        className="features-grid"
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, 1fr)',
+          gap: '12px'
+        }}
+      >
         {features.map((feature, index) => (
           <div
             key={index}
@@ -32,13 +35,15 @@ const Features = () => {
               background: '#f9fafb',
               borderRadius: '8px',
               fontSize: '14px',
-              color: '#555'
+              color: '#555',
+              maxWidth: '100%',
+              boxSizing: 'border-box'
             }}
           >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" strokeWidth="2.5">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" strokeWidth="2.5" style={{ flexShrink: 0 }}>
               <polyline points="20 6 9 17 4 12" />
             </svg>
-            {feature}
+            <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{feature}</span>
           </div>
         ))}
       </div>
