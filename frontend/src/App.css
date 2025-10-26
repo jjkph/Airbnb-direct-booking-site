@@ -142,29 +142,43 @@ img {
 }
 
 @media (max-width: 768px) {
+  * {
+    max-width: 100vw;
+  }
+  
   html, body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     width: 100%;
     max-width: 100vw;
   }
   
   .App {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     max-width: 100vw;
+    width: 100%;
   }
   
   h1 {
     font-size: 26px;
+    max-width: 100%;
+    word-wrap: break-word;
   }
   
   h2 {
     font-size: 22px;
+    max-width: 100%;
+  }
+  
+  h3 {
+    font-size: 18px;
+    max-width: 100%;
   }
   
   .card {
-    padding: 24px;
+    padding: 20px;
     width: 100%;
     max-width: 100%;
+    box-sizing: border-box;
   }
   
   .container {
@@ -172,6 +186,7 @@ img {
     width: 100%;
     max-width: 100vw;
     box-sizing: border-box;
+    overflow-x: hidden;
   }
   
   .hero-gallery-grid {
@@ -193,12 +208,20 @@ img {
   .main-layout {
     width: 100%;
     max-width: 100%;
+    overflow-x: hidden;
   }
   
   /* Ensure all images are constrained */
   img {
     max-width: 100%;
     height: auto;
+  }
+  
+  /* Ensure all text elements wrap properly */
+  p, div, span {
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   
   /* Hide navigation links on mobile */
@@ -219,6 +242,7 @@ img {
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
     z-index: 999;
     border-top: 1px solid #e5e7eb;
+    box-sizing: border-box;
   }
   
   .mobile-check-availability button {
