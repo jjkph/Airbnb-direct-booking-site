@@ -52,6 +52,10 @@ __pycache__/
 venv/
 .venv/
 
+# Backend folder (not needed for GitHub Pages deployment)
+backend/
+/backend
+
 # Development tools
 chainlit.md
 .chainlit
