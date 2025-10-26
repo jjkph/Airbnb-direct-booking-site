@@ -205,6 +205,11 @@ img {
     gap: 32px !important;
   }
   
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+  
   .main-layout {
     width: 100%;
     max-width: 100%;
