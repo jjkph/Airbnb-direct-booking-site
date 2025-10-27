@@ -78,6 +78,7 @@ If you want to use a custom domain:
 │   ├── public/
 │   └── package.json
 ├── docs/             # Built files for GitHub Pages (auto-generated)
+│   ├── .nojekyll     # Disables Jekyll (IMPORTANT!)
 │   ├── index.html
 │   ├── static/
 │   └── ...
