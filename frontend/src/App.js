@@ -8,7 +8,7 @@ import Overview from './components/Overview';
 import Features from './components/Features';
 import Reviews from './components/Reviews';
 import Location from './components/Location';
-import ContactUs from './components/ContactUs';
+import AboutHost from './components/AboutHost';
 import ThingsToKnow from './components/ThingsToKnow';
 
 function App() {
