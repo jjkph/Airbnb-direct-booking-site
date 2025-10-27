@@ -14,6 +14,7 @@ npm run deploy
 This will:
 - Build your React app
 - Copy the build files to `/docs` folder at the repository root
+- Create a `.nojekyll` file to disable Jekyll processing
 - The `/docs` folder will contain all static files needed for GitHub Pages
 
 ### 2. Configure GitHub Pages
