@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const Location = () => {
   const mapRef = useRef(null);
+  const [mapLoadError, setMapLoadError] = useState(false);
   const apiKey = "AIzaSyA6oM8ZrcqvbFsjZwfBDpkefMyEpreix54";
   
   useEffect(() => {
@@ -13,26 +14,36 @@ const Location = () => {
     
     script.onload = () => {
       if (mapRef.current && window.google) {
-        // Intersection of Johnson St and N 11th Ct, Hollywood, FL 33019
-        const propertyLocation = { lat: 26.0193, lng: -80.1421 };
-        // Center map on property location
-        const mapCenter = { lat: 26.0193, lng: -80.1421 };
-        
-        const map = new window.google.maps.Map(mapRef.current, {
-          center: mapCenter,
-          zoom: 12,
-          mapTypeControl: false,
-          streetViewControl: false,
-          fullscreenControl: true,
-        });
-        
-        // Add marker at exact property location (address not displayed on map)
-        new window.google.maps.Marker({
-          position: propertyLocation,
-          map: map,
-          title: 'Casa Caralago',
-        });
+        try {
+          // Intersection of Johnson St and N 11th Ct, Hollywood, FL 33019
+          const propertyLocation = { lat: 26.0193, lng: -80.1421 };
+          // Center map on property location
+          const mapCenter = { lat: 26.0193, lng: -80.1421 };
+          
+          const map = new window.google.maps.Map(mapRef.current, {
+            center: mapCenter,
+            zoom: 12,
+            mapTypeControl: false,
+            streetViewControl: false,
+            fullscreenControl: true,
+          });
+          
+          // Add marker at exact property location (address not displayed on map)
+          new window.google.maps.Marker({
+            position: propertyLocation,
+            map: map,
+            title: 'Casa Caralago',
+          });
+        } catch (error) {
+          console.error('Error loading Google Maps:', error);
+          setMapLoadError(true);
+        }
       }
+    };
+    
+    script.onerror = () => {
+      console.error('Failed to load Google Maps API');
+      setMapLoadError(true);
     };
     
     if (!document.querySelector(`script[src*="maps.googleapis.com"]`)) {
