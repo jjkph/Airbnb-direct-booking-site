@@ -120,7 +120,7 @@ const Header = () => {
             onMouseEnter={(e) => e.target.style.color = '#3b82f6'}
             onMouseLeave={(e) => e.target.style.color = '#555'}
           >
-            Contact Us
+            Contact
           </a>
         </nav>
       </div>
