@@ -88,6 +88,10 @@ If you want to use a custom domain:
 
 ## Troubleshooting
 
+**Issue**: Site shows README or default page instead of your site
+- **Solution**: Make sure `.nojekyll` file exists in `/docs` folder (this disables Jekyll processing)
+- The deploy script now automatically creates this file
+
 **Issue**: Site shows blank page or 404 errors
 - **Solution**: Make sure `"homepage": "."` is in `package.json` (already added)
 
