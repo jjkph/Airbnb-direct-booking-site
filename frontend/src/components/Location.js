@@ -6,6 +6,14 @@ const Location = () => {
   const apiKey = "AIzaSyA6oM8ZrcqvbFsjZwfBDpkefMyEpreix54";
   
   useEffect(() => {
+    // Timeout to detect if map fails to load
+    const timeoutId = setTimeout(() => {
+      if (mapRef.current && !mapRef.current.querySelector('div[style*="position: absolute"]')) {
+        console.log('Google Maps failed to initialize - showing fallback');
+        setMapLoadError(true);
+      }
+    }, 5000);
+    
     // Load Google Maps script
     const script = document.createElement('script');
     script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}`;
@@ -34,9 +42,13 @@ const Location = () => {
             map: map,
             title: 'Casa Caralago',
           });
+          
+          // Clear timeout if map loads successfully
+          clearTimeout(timeoutId);
         } catch (error) {
           console.error('Error loading Google Maps:', error);
           setMapLoadError(true);
+          clearTimeout(timeoutId);
         }
       }
     };
@@ -44,6 +56,7 @@ const Location = () => {
     script.onerror = () => {
       console.error('Failed to load Google Maps API');
       setMapLoadError(true);
+      clearTimeout(timeoutId);
     };
     
     if (!document.querySelector(`script[src*="maps.googleapis.com"]`)) {
@@ -53,7 +66,7 @@ const Location = () => {
     }
     
     return () => {
-      // Cleanup if needed
+      clearTimeout(timeoutId);
     };
   }, [apiKey]);
   
