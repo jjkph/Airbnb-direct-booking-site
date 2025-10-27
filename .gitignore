@@ -26,9 +26,10 @@ next-env.d.ts
 *.tsbuildinfo
 
 # Production builds
-/build
+/frontend/build
 dist/
 dist
+# Note: /docs folder should be committed for GitHub Pages
 
 # Environment files (comprehensive coverage)
 
