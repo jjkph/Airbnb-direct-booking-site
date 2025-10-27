@@ -26,11 +26,11 @@ const Location = () => {
           fullscreenControl: true,
         });
         
-        // Add marker at property location with standard red Google Maps pin
+        // Add marker at exact property location (address not displayed on map)
         new window.google.maps.Marker({
           position: propertyLocation,
           map: map,
-          title: 'Casa Caralago - 920 N 11th Ct',
+          title: 'Casa Caralago',
         });
       }
     };
