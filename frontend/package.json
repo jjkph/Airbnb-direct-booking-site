@@ -57,8 +57,11 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "craco test"
+    "test": "craco test",
+    "predeploy": "npm run build",
+    "deploy": "npm run build && rm -rf ../docs && cp -r build ../docs"
   },
+  "homepage": ".",
   "browserslist": {
     "production": [
       ">0.2%",
