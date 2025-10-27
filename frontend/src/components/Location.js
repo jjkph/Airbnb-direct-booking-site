@@ -88,17 +88,50 @@ const Location = () => {
         </div>
       </div>
 
-      {/* Google Map */}
-      <div 
-        ref={mapRef}
-        style={{
+      {/* Google Map or Static Fallback */}
+      {mapLoadError ? (
+        <div style={{
           width: '100%',
           height: '400px',
           borderRadius: '12px',
           overflow: 'hidden',
-          border: '1px solid #e5e7eb'
-        }}
-      ></div>
+          border: '1px solid #e5e7eb',
+          position: 'relative'
+        }}>
+          <img 
+            src="/map-fallback.jpg"
+            alt="Map showing property location in Hollywood Lakes"
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover'
+            }}
+          />
+          <div style={{
+            position: 'absolute',
+            bottom: '12px',
+            left: '12px',
+            background: 'rgba(255, 255, 255, 0.95)',
+            padding: '8px 12px',
+            borderRadius: '6px',
+            fontSize: '12px',
+            color: '#666'
+          }}>
+            Map temporarily unavailable
+          </div>
+        </div>
+      ) : (
+        <div 
+          ref={mapRef}
+          style={{
+            width: '100%',
+            height: '400px',
+            borderRadius: '12px',
+            overflow: 'hidden',
+            border: '1px solid #e5e7eb'
+          }}
+        ></div>
+      )}
     </div>
   );
 };
