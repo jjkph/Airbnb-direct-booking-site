@@ -13,10 +13,10 @@ const Location = () => {
     
     script.onload = () => {
       if (mapRef.current && window.google) {
-        // 920 N 11th Ct, Hollywood, FL 33019 - Exact property location
-        const propertyLocation = { lat: 26.019165, lng: -80.144562 };
+        // 920 N 11th Ct, Hollywood, FL 33019 - East of US1 in Hollywood Lakes
+        const propertyLocation = { lat: 26.0192, lng: -80.1396 };
         // Center map on property location
-        const mapCenter = { lat: 26.019165, lng: -80.144562 };
+        const mapCenter = { lat: 26.0192, lng: -80.1396 };
         
         const map = new window.google.maps.Map(mapRef.current, {
           center: mapCenter,
