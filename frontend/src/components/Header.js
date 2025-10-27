@@ -25,7 +25,7 @@ const Header = () => {
             src="https://customer-assets.emergentagent.com/job_casa-caralago/artifacts/wb4u5w16_Jade%20Key%20Logo%20-%20Keys%20Only.jpg"
             alt="Casa Caralago Logo"
             style={{
-              height: '40px',
+              height: '30px',
               width: 'auto',
               objectFit: 'contain'
             }}
