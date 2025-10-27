@@ -61,7 +61,7 @@
     "predeploy": "npm run build",
     "deploy": "npm run build && rm -rf ../docs && cp -r build ../docs && touch ../docs/.nojekyll"
   },
-  "homepage": ".",
+  "homepage": "https://www.casacaralago.com",
   "browserslist": {
     "production": [
       ">0.2%",
