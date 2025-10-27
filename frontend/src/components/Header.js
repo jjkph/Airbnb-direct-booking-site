@@ -17,11 +17,26 @@ const Header = () => {
         justifyContent: 'space-between'
       }}>
         <div style={{
-          fontSize: '18px',
-          fontWeight: '600',
-          color: '#2c3e50'
+          display: 'flex',
+          alignItems: 'center',
+          gap: '12px'
         }}>
-          Casa Caralago
+          <img 
+            src="https://customer-assets.emergentagent.com/job_casa-caralago/artifacts/wb4u5w16_Jade%20Key%20Logo%20-%20Keys%20Only.jpg"
+            alt="Casa Caralago Logo"
+            style={{
+              height: '40px',
+              width: 'auto',
+              objectFit: 'contain'
+            }}
+          />
+          <div style={{
+            fontSize: '18px',
+            fontWeight: '600',
+            color: '#2c3e50'
+          }}>
+            Casa Caralago
+          </div>
         </div>
         <nav 
           className="desktop-nav"
