@@ -55,7 +55,7 @@ function App() {
             <Features />
             <Reviews />
             <Location />
-            <ContactUs />
+            <AboutHost />
             <ThingsToKnow />
           </div>
           <div style={{ height: '100%', minHeight: '3000px', overflow: 'visible' }}>
